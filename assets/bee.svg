@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Bee SVG derived from logo / bee-like character -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#fff" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0.05"/>
+    </linearGradient>
+  </defs>
+  <g transform="translate(100,100)">
+    <!-- body -->
+    <ellipse cx="0" cy="10" rx="48" ry="54" fill="#ffd84d" stroke="#c58f1a" stroke-width="3" />
+    <!-- stripes -->
+    <rect x="-48" y="-10" width="96" height="18" fill="#7a4f1a" rx="9"/>
+    <rect x="-48" y="18" width="96" height="18" fill="#7a4f1a" rx="9"/>
+    <!-- wings -->
+    <ellipse cx="-36" cy="-30" rx="22" ry="32" fill="#e6f3ff" opacity="0.8" />
+    <ellipse cx="36" cy="-30" rx="22" ry="32" fill="#e6f3ff" opacity="0.8" />
+    <!-- head -->
+    <rect x="-28" y="-66" width="56" height="56" rx="10" fill="#ffd84d" stroke="#c58f1a" stroke-width="3" />
+    <ellipse cx="-12" cy="-42" rx="8" ry="16" fill="#0b2b2b" />
+    <ellipse cx="12" cy="-42" rx="8" ry="16" fill="#0b2b2b" />
+    <!-- antennae -->
+    <path d="M-4 -66 C-10 -86 -18 -96 -22 -110" stroke="#1b1b1b" stroke-width="4" fill="none" stroke-linecap="round" />
+    <path d="M8 -66 C14 -86 22 -96 26 -110" stroke="#1b1b1b" stroke-width="4" fill="none" stroke-linecap="round" />
+    <circle cx="-22" cy="-110" r="6" fill="#bff07c" stroke="#6fb53a" stroke-width="1.5" />
+    <circle cx="26" cy="-110" r="6" fill="#bff07c" stroke="#6fb53a" stroke-width="1.5" />
+  </g>
+</svg>

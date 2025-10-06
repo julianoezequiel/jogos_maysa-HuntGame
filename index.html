@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Hunt Game - p5.js</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%239fd3c7'/%3E%3Ccircle cx='16' cy='12' r='6' fill='%23fff'/%3E%3C/svg%3E">
+  <!-- playful font for kids -->
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="ui">
+    <div id="top">
+      <img id="logo" src="assets/logo.svg" alt="logo" />
+      <div id="timer">Tempo: 0s</div>
+  <div id="score">Pontos: 0</div>
+  <div id="health">Hematomas: 0/3</div>
+  <div id="upgradeBadge" title="Quantos upgrades de hematomas você acumulou">Upg: 0</div>
+      <div id="player">Jogador: -</div>
+    </div>
+    <div id="controls">
+      <button id="startBtn">Iniciar</button>
+      <button id="restartBtn">Reiniciar</button>
+      <div style="display:flex;align-items:center;gap:8px;margin-left:12px">
+        <label for="volumeSlider" style="font-size:13px">Som</label>
+        <input id="volumeSlider" type="range" min="0" max="100" value="80" />
+        <button id="muteBtn" title="Ativar/Desativar som">🔊</button>
+      </div>
+    </div>
+    <div id="leaderboard">
+      <h3>Top 10</h3>
+      <ol id="leaderList"></ol>
+      <div id="stickerShelf" aria-label="Sticker shelf">
+        <div id="stickerIcon">⭐</div>
+        <div id="stickerCount">0</div>
+      </div>
+      <div style="margin-top:8px;display:flex;gap:6px;align-items:center">
+        <button id="clearMyBtn">Limpar meu recorde</button>
+        <button id="clearAllBtn">Limpar leaderboard</button>
+      </div>
+      <div id="recordFeedback" style="margin-top:6px;color:#0a7; font-weight:600; display:none">Novo recorde!</div>
+    </div>
+  </div>
+  <main>
+    <div id="canvas-container"></div>
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.min.js"></script>
+  <!-- New modular scripts -->
+  <script src="src/audio.js"></script>
+  <script src="src/entities.js"></script>
+  <script src="src/leaderboard.js"></script>
+  <script src="src/game.js"></script>
+  <script src="src/ui.js"></script>
+  <script src="src/main.js"></script>
+</body>
+</html>

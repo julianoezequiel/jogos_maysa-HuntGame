@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 320" width="240" height="320">
+  <!-- Stylized blocky bear character inspired by the provided image -->
+  <defs>
+    <linearGradient id="bodyGrad" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#e6a089"/>
+      <stop offset="100%" stop-color="#c9785f"/>
+    </linearGradient>
+    <linearGradient id="innerGrad" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#f6d6be"/>
+      <stop offset="100%" stop-color="#e6b99a"/>
+    </linearGradient>
+  </defs>
+
+  <!-- feet (separate pieces) -->
+  <rect x="36" y="260" width="68" height="26" rx="6" fill="#b57361" stroke="#8a4636" stroke-width="3" />
+  <rect x="136" y="260" width="68" height="26" rx="6" fill="#b57361" stroke="#8a4636" stroke-width="3" />
+
+  <!-- body -->
+  <rect x="36" y="120" width="168" height="140" rx="18" fill="url(#bodyGrad)" stroke="#8a4636" stroke-width="4" />
+
+  <!-- belly panel -->
+  <rect x="76" y="160" width="88" height="80" rx="12" fill="url(#innerGrad)" stroke="#b57a64" stroke-width="3" />
+
+  <!-- arms -->
+  <rect x="-2" y="132" width="52" height="64" rx="12" fill="url(#bodyGrad)" stroke="#8a4636" stroke-width="4" transform="rotate(-18 24 164)" />
+  <rect x="190" y="132" width="52" height="64" rx="12" fill="url(#bodyGrad)" stroke="#8a4636" stroke-width="4" transform="rotate(18 216 164)" />
+
+  <!-- head (boxy) -->
+  <rect x="56" y="10" width="128" height="128" rx="18" fill="url(#bodyGrad)" stroke="#8a4636" stroke-width="4" />
+  
+  <!-- inner face panel -->
+  <rect x="84" y="50" width="72" height="64" rx="10" fill="url(#innerGrad)" stroke="#b57a64" stroke-width="3" />
+
+  <!-- eyes -->
+  <ellipse cx="100" cy="84" rx="10" ry="20" fill="#0b2b2b" />
+  <ellipse cx="140" cy="84" rx="10" ry="20" fill="#0b2b2b" />
+
+  <!-- nose/mouth -->
+  <path d="M112 110 q8 10 16 0" stroke="#0b2b2b" stroke-width="4" stroke-linecap="round" fill="none" />
+
+  <!-- ears -->
+  <rect x="44" y="-4" width="34" height="34" rx="8" fill="url(#bodyGrad)" stroke="#8a4636" stroke-width="4" />
+  <rect x="162" y="-4" width="34" height="34" rx="8" fill="url(#bodyGrad)" stroke="#8a4636" stroke-width="4" />
+
+  <!-- outline highlight -->
+  <rect x="32" y="-8" width="176" height="280" rx="22" fill="none" stroke="rgba(255,255,255,0.35)" stroke-width="6" />
+</svg>

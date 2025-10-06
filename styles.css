@@ -1,0 +1,79 @@
+:root{
+	--bg: #f2f5f7;
+	--card: #ffffff;
+	--accent: #9fd3c7;
+	--accent-dark: #7cc8b2;
+	--danger: #ffb4b4;
+	--muted: #6b6b6b;
+	--radius: 8px;
+	--shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+*{box-sizing:border-box;font-family:Inter, Arial, Helvetica, sans-serif}
+html,body{height:100%;margin:0}
+body{display:flex;flex-direction:column;align-items:center;background:var(--bg);color:#0b0b0b}
+
+#ui{width:800px;max-width:96%;margin:14px 0;padding:0 6px}
+#top{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:8px}
+#logo{width:56px;height:auto}
+
+/* HUD small cards */
+.hud-card{background:var(--card);padding:8px 12px;border-radius:6px;box-shadow:0 1px 3px rgba(0,0,0,0.08);font-size:14px}
+#timer,#score{display:inline-block}
+#score{font-family:'Fredoka One', Inter, Arial, sans-serif; font-size:18px}
+
+/* pop animation for score when increasing */
+.pop-animate{animation:scorePop .42s ease-out}
+@keyframes scorePop{
+	0%{transform:scale(1);}
+	30%{transform:scale(1.28);}
+	60%{transform:scale(0.95);}
+	100%{transform:scale(1);}
+}
+#controls{display:flex;gap:8px;align-items:center}
+
+button{padding:8px 12px;border-radius:8px;border:1px solid #e0e0e0;background:var(--card);cursor:pointer;box-shadow:none;transition:transform .12s ease, box-shadow .12s ease}
+button:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
+button:active{transform:translateY(0);box-shadow:none}
+
+#health{background:linear-gradient(180deg,var(--danger),#fff1f1);padding:6px 10px;border-radius:6px;border:1px solid #f0b4b4;color:#8a2b2b}
+#health.upgrade-glow{box-shadow:0 0 18px rgba(255,200,80,0.9); transition:box-shadow 0.28s ease, transform 0.18s ease; transform:scale(1.03);}
+#upgradeBadge{display:inline-block;margin-left:8px;background:linear-gradient(90deg,#fff7e6,#fff3d6);padding:4px 8px;border-radius:999px;border:1px solid #f0d99a;color:#8a5b00;font-weight:700;font-size:13px}
+#player{background:var(--card);padding:6px 10px;border-radius:6px;border:1px solid #e6e6e6}
+
+/* leaderboard */
+#leaderboard{position:fixed;right:18px;top:80px;width:210px;background:rgba(255,255,255,0.98);border-radius:var(--radius);padding:12px;box-shadow:var(--shadow);z-index:120}
+#leaderboard h3{margin:0 0 8px 0;font-size:16px}
+#leaderList{margin:0;padding-left:18px}
+#leaderList li{margin:6px 0;font-size:14px;color:var(--muted)}
+
+#stickerShelf{display:flex;align-items:center;gap:8px;margin-top:8px}
+#stickerIcon{font-size:20px;filter:drop-shadow(0 2px 4px rgba(0,0,0,0.12))}
+#stickerCount{background:var(--card);padding:4px 8px;border-radius:999px;border:1px solid #e8e8e8;font-weight:700}
+
+/* streak meter near score */
+#streakMeter{position:fixed;left:18px;top:16px;background:linear-gradient(90deg,#fff,#f8fff8);padding:6px 10px;border-radius:999px;border:1px solid #e6f2ea;box-shadow:0 6px 14px rgba(0,0,0,0.04);font-weight:700;color:#0a7;z-index:130}
+
+/* responsive main/canvas area */
+main{width:800px;max-width:96%;}
+#canvas-container{background:var(--accent);border-radius:10px;overflow:hidden;position:relative;cursor:none;display:flex;align-items:center;justify-content:center}
+canvas{display:block;width:100%;height:auto}
+
+/* overlay custom cursor element that follows the mouse */
+#gameCursor{position:absolute;left:0;top:0;pointer-events:none;width:48px;height:48px;transform:translate(-50%,-50%);transition:transform .06s ease, opacity .12s ease;z-index:200}
+#gameCursor.click{transform:translate(-50%,-50%) scale(0.9);opacity:0.95}
+
+/* record feedback */
+#recordFeedback{color:#0a7;font-weight:700;display:none;margin-top:8px}
+
+/* volume slider styles */
+#volumeSlider{width:120px;appearance:none;height:6px;border-radius:6px;background:linear-gradient(90deg,var(--accent-dark),var(--accent));outline:none}
+#volumeSlider::-webkit-slider-thumb{appearance:none;width:14px;height:14px;border-radius:50%;background:#fff;border:2px solid var(--muted);box-shadow:0 2px 6px rgba(0,0,0,0.12)}
+#muteBtn{padding:6px 8px;border-radius:8px;border:1px solid #e0e0e0;background:var(--card)}
+
+/* small screens: make leaderboard flow below UI */
+@media (max-width:720px){
+	#leaderboard{position:relative;right:auto;top:auto;width:100%;max-width:360px;margin:12px auto}
+	main{width:100%}
+	#ui{padding:0 12px}
+}

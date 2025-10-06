@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 260" width="200" height="260">
+  <!-- Base yellow rounded rectangle body -->
+  <defs>
+    <linearGradient id="g1" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#ffd84d"/>
+      <stop offset="100%" stop-color="#f0bf2e"/>
+    </linearGradient>
+  </defs>
+  <rect x="20" y="30" width="160" height="180" rx="24" ry="24" fill="url(#g1)" stroke="#c58f1a" stroke-width="4"/>
+  <!-- head section -->
+  <rect x="36" y="6" width="56" height="56" rx="12" fill="#ffd84d" stroke="#c58f1a" stroke-width="4" />
+  <rect x="108" y="6" width="56" height="56" rx="12" fill="#ffd84d" stroke="#c58f1a" stroke-width="4" />
+  <!-- eyes -->
+  <circle cx="74" cy="98" r="12" fill="#1b1b1b" />
+  <circle cx="126" cy="98" r="12" fill="#1b1b1b" />
+  <!-- angry brows -->
+  <path d="M60 82 Q74 70 88 82" stroke="#1b1b1b" stroke-width="6" stroke-linecap="round" fill="none" />
+  <path d="M112 82 Q126 70 140 82" stroke="#1b1b1b" stroke-width="6" stroke-linecap="round" fill="none" />
+  <!-- stripes -->
+  <rect x="32" y="140" width="136" height="18" rx="6" fill="#7a4f1a" />
+  <rect x="32" y="172" width="136" height="18" rx="6" fill="#7a4f1a" />
+  <!-- mouth -->
+  <rect x="88" y="122" width="24" height="8" rx="4" fill="#1b1b1b" />
+  <!-- antennae -->
+  <path d="M64 6 C58 -6 50 -18 48 -26" stroke="#1b1b1b" stroke-width="6" fill="none" stroke-linecap="round" />
+  <path d="M136 6 C142 -6 150 -18 152 -26" stroke="#1b1b1b" stroke-width="6" fill="none" stroke-linecap="round" />
+  <circle cx="46" cy="-26" r="8" fill="#bff07c" stroke="#6fb53a" stroke-width="2" />
+  <circle cx="154" cy="-26" r="8" fill="#bff07c" stroke="#6fb53a" stroke-width="2" />
+  <!-- subtle drop shadow -->
+  <ellipse cx="100" cy="228" rx="60" ry="10" fill="rgba(0,0,0,0.12)" />
+</svg>
