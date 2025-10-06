@@ -1,6 +1,26 @@
 HuntGame
 ========
 
+Jogo feito com p5.js. Controle personagens e colete itens enquanto evita inimigos.
+
+Como rodar localmente
+- Abra `HuntGame/index.html` em um navegador moderno.
+- Para servir localmente (evitar CORS), use um servidor estático:
+
+```powershell
+cd HuntGame
+python -m http.server 8001
+# abra http://localhost:8001
+```
+
+Arquivos importantes
+- `index.html`, `sketch.js`, `assets/`
+
+Licença
+- Parte do repositório `jogos_maysa`.
+HuntGame
+========
+
 Jogo de captura com p5.js — contém lógica de entidades e leaderboard.
 
 Como abrir
